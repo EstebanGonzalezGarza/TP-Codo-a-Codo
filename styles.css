@@ -1,0 +1,64 @@
+/* Estilos para el encabezado */
+h1 {
+    color: #FF5733;
+    /* Color de fuente */
+    text-align: center;
+    /* Alineación del texto */
+    text-decoration: underline;
+    /* Texto subrayado */
+}
+
+/* Estilos para los títulos de sección */
+h2 {
+    color: #0066CC;
+    /* Color de fuente */
+    text-decoration: underline;
+    /* Texto subrayado */
+}
+body {
+    background-color: #ADD8E6;
+    /* Código de color para el celeste */
+}
+/* Estilos para la lista de ingredientes */
+ul {
+    color: #333;
+    /* Color de fuente */
+    font-size: 16px;
+    /* Tamaño de fuente */
+}
+
+/* Estilos para la lista numerada de preparación */
+ol {
+    color: #333;
+    /* Color de fuente */
+    font-size: 16px;
+    /* Tamaño de fuente */
+}
+
+/* Estilos para las imágenes */
+img {
+    width: 100%;
+    /* Tamaño de imagen al 100% del contenedor */
+    height: auto;
+    /* Altura automática para mantener la proporción */
+}
+
+/* Estilos para los iframes de video */
+iframe {
+    width: 100%;
+    /* Tamaño de iframe al 100% del contenedor */
+    height: 315px;
+    /* Altura fija o ajusta según sea necesario */
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    /* Alineación del texto */
+    background-color: #333;
+    /* Color de fondo */
+    color: white;
+    /* Color de fuente */
+    padding: 10px;
+    /* Espaciado interior */
+}
