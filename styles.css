@@ -1,89 +1,72 @@
 /* Estilos para el encabezado */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0da5dc;
+    padding: 20px;
+}
+
 h1 {
     color: #3c04ad;
-    /* Color de fuente */
     text-align: center;
-    /* Alineación del texto */
     text-decoration: underline;
-    /* Texto subrayado */
+}
+/* Estilos para el icono de WhatsApp móvil */
+.whatsapp-icon {
+    position:relative;
+    /* Posición relativa para que sea relativo al flujo del documento */
+    margin-bottom: 20px;
+    /* Espacio desde la parte inferior de los contenidos */
+}
+nav {
+    margin-top: 20px;
 }
 
-/* Estilos para los títulos de sección */
-h2 {
-    color: #0066CC;
-    /* Color de fuente */
-    text-decoration: underline;
-    /* Texto subrayado */
+nav a {
+    margin: 10px;
 }
-body {
-    background-color: #ADD8E6;
-    /* Código de color para el celeste */
-}
-/* Estilos para la lista de ingredientes */
-ul {
-    color: #333;
-    /* Color de fuente */
-    font-size: 16px;
-    /* Tamaño de fuente */
-}
-
-/* Estilos para la lista numerada de preparación */
-ol {
-    color: #333;
-    /* Color de fuente */
-    font-size: 16px;
-    /* Tamaño de fuente */
-}
-
-/* Estilos para las imágenes */
-img {
-    width: 100%;
-    /* Tamaño de imagen al 100% del contenedor */
-    height: auto;
-    /* Altura automática para mantener la proporción */
-}
-/* Estilos para la imagen de WhatsApp en el aside */
-
-aside {
-    position: fixed;
-    /* Hace que el elemento sea fijo en la ventana del navegador */
-    bottom: 40px;
-    /* Distancia desde la parte inferior de la ventana */
-    right: 40px;
-    /* Distancia desde la parte derecha de la ventana */
-    z-index: 1000;
-    /* Z-index para asegurarse de que esté por encima de otros elementos */
-}
-
-aside a img {
-    width: 80px;
-    /* Tamaño deseado para la imagen de WhatsApp */
-    height: auto;
-    /* Altura automática para mantener la proporción */
-}
-
-
-/* Estilos para los iframes de video */
-iframe {
-    width: 100%;
-    /* Tamaño de iframe al 100% del contenedor */
-    height: 315px;
-    /* Altura fija o ajusta según sea necesario */
-}
-.redes-sociales img {
-    max-width: 40px; /* Ancho máximo deseado en píxeles */
-    height: auto; /* Altura automática para mantener la proporción */
-}
-
 
 /* Estilos para el pie de página */
 footer {
-    text-align: center;
-    /* Alineación del texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #333;
-    /* Color de fondo */
     color: white;
-    /* Color de fuente */
-    padding: 10px;
-    /* Espaciado interior */
+    padding: 5px;
+}
+
+/* Limitar el ancho máximo del footer */
+footer {
+    max-width: 100%;
+    /* Ajusta el valor según tus necesidades */
+    margin: 0 auto;
+    /* Centra el footer horizontalmente */
+}
+
+/* Estilos para las imágenes dentro del footer */
+footer img {
+    max-width: 20%;
+    /* Las imágenes no se expandirán más allá de su tamaño original */
+    height: auto;
+    /* Mantendrá la relación de aspecto original */
+}
+
+.redes-sociales {
+    display: flex;
+    margin-top: 10px;
+}
+
+.redes-sociales a {
+    margin: 5px;
+}
+
+/* Aplicar flex-wrap al Header y al Footer para que los elementos se coloquen uno debajo del otro en pantallas pequeñas */
+@media (max-width: 768px) {
+
+    header,
+    footer {
+        flex-direction: column;
+    }
 }
