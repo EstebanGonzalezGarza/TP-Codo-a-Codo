@@ -1,34 +1,92 @@
-/* Estilos para el encabezado */
+/* Centrar las imágenes horizontalmente dentro del carrusel */
+.carousel-inner .carousel-item img {
+    display: block;
+    margin: 0 auto;
+    /* Esto centrará horizontalmente la imagen dentro de su contenedor */
+}
+
+/* Ajustar el z-index para los botones de control */
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 100;
+    /* Puedes ajustar este valor según sea necesario */
+}
+.carousel-inner .carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0da5dc;
-    padding: 20px;
+    background-color: #b3ab15;
+    padding: 40px;
 }
 /* Aplicar la fuente Roboto a elementos específicos */
+/* Establecer una imagen de fondo */
 body {
     font-family: 'Roboto', sans-serif;
+    background-image: url('img/empa.avif');
+    background-size: cover;
+    /* Para que la imagen de fondo cubra toda la pantalla */
+    background-repeat: no-repeat;
+    /* Para que la imagen de fondo no se repita */
+    background-attachment: fixed;
+    /* Fija la imagen de fondo para que no se desplace con el contenido */
 }
-
+.hover-effect:hover {
+    transform: scale(1.8);
+    /* Ajusta el valor para cambiar el nivel de zoom */
+    transition: transform 0.4s;
+    /* Agrega una transición suave para el efecto */
+}
 /* Efecto de hover en los enlaces */
 a:hover {
+    transform: scale(1.9);
+    transition: transform 0.4s;
     color: #ff0000;
     /* Cambia el color al pasar el mouse */
     text-decoration: underline;
     /* Puedes agregar otros estilos según tu preferencia */
 }
 h1 {
-    color: #3c04ad;
+    color: #270756;
     text-align: center;
     text-decoration: underline;
 }
-/* Estilos para el icono de WhatsApp móvil */
+
+   /* Estilo para el texto blanco o casi blanco */
+   body,
+   h2,
+   li,
+   p {
+       color: #ffffff;
+       /* Cambia el color a blanco */
+   }
+
+
+#pedidoEmpanadas {
+    text-align: center;
+    /* Centra el contenido del formulario horizontalmente */
+    margin: 0 auto;
+    /* Centra el formulario en el centro de la página */
+    max-width: 400px;
+    /* Establece un ancho máximo para el formulario */
+}
+#centrar {
+text-align: center;
+}
+#centrar ul,
+#centrar ol {
+    text-align: left;
+    display: inline-block;
+}   
 .whatsapp-icon {
-    position:relative;
-    /* Posición relativa para que sea relativo al flujo del documento */
-    margin-bottom: 20px;
-    /* Espacio desde la parte inferior de los contenidos */
+    position: fixed;
+    bottom: 20px;
+    /* Ajusta la distancia desde la parte inferior según tu preferencia */
+    right: 20px;
+    /* Ajusta la distancia desde la derecha según tu preferencia */
 }
 nav {
     margin-top: 20px;
@@ -37,47 +95,78 @@ nav {
 nav a {
     margin: 10px;
 }
-
-/* Estilos para el pie de página */
+/* Estilos para el footer */
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #333;
     color: white;
-    padding: 5px;
+    padding: 20px;
+    text-align: center;
+    /* Centra el texto horizontalmente */
 }
 
-/* Limitar el ancho máximo del footer */
-footer {
-    max-width: 100%;
-    /* Ajusta el valor según tus necesidades */
-    margin: 0 auto;
-    /* Centra el footer horizontalmente */
+/* Estilos para el párrafo dentro del footer */
+footer p {
+    margin-bottom: 15px;
 }
 
-/* Estilos para las imágenes dentro del footer */
-footer img {
-    max-width: 20%;
-    /* Las imágenes no se expandirán más allá de su tamaño original */
-    height: auto;
-    /* Mantendrá la relación de aspecto original */
-}
-
+/* Estilos para las imágenes de redes sociales */
 .redes-sociales {
     display: flex;
-    margin-top: 10px;
+    justify-content: center;
+    /* Centra las imágenes horizontalmente */
 }
 
 .redes-sociales a {
-    margin: 5px;
+    margin: 10px;
+    /* Espacio entre las imágenes */
+    display: block;
+    /* Para que el margen se aplique correctamente */
+    text-align: center;
+    /* Centra las imágenes y sus etiquetas */
 }
 
-/* Aplicar flex-wrap al Header y al Footer para que los elementos se coloquen uno debajo del otro en pantallas pequeñas */
+.redes-sociales img {
+    max-width: 50px;
+    /* Tamaño máximo de las imágenes */
+    height: auto;
+    /* Mantén la relación de aspecto original */
+}
+
+/* Estilo para campos de entrada */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón del formulario */
+button[type="submit"] {
+    background-color: #0da5dc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#resultado {
+    background-color: rgb(79, 90, 20);
+    text-align: center;
+    padding: 20px;
+    color: black;
+    border: 1px solid black;
+}
+
 @media (max-width: 768px) {
 
-    header,
-    footer {
+    header {
         flex-direction: column;
     }
 }
